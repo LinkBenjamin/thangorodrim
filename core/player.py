@@ -36,44 +36,44 @@ class Player:
     # --- FACTORY CONSTRUCTORS ---
 
     @classmethod
-    def from_file(self, filepath):
+    def from_file(cls, filepath):
         '''Load player data from a JSON file'''
         with open(filepath, 'r', encoding='utf-8') as f:
             data = json.load(f)
-        return self(data)
+        return cls(data)
     
     @classmethod
-    def from_json(self, data):
+    def from_json(cls, data):
         '''Initialize from an existing JSON object or dictionary'''
-        return self(data)
+        return cls(data)
     
     @classmethod
-    def new_player(self, name, character_class, race):
+    def new_player(cls, name, character_class, race):
         '''Auto-roll a new character'''
         pass
 
     # --- GAMEPLAY METHODS ---
 
-    def move(self, direction, speed):
+    def move(cls, direction, speed):
         pass
 
-    def equip(self, item):
+    def equip(cls, item):
         pass
 
-    def melee_attack(self):
+    def melee_attack(cls):
         pass
 
-    def ranged_attack(self):
+    def ranged_attack(cls):
         pass
 
-    def use_magic(self):
+    def use_magic(cls):
         pass
 
-    def pick_up(self, item):
+    def pick_up(cls, item):
         pass
 
-    def drop(self, item):
+    def drop(cls, item):
         pass
 
-    def _calculate_weight_(self):
+    def _calculate_weight_(cls):
         pass
