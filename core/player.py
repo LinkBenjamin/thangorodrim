@@ -54,26 +54,26 @@ class Player:
 
     # --- GAMEPLAY METHODS ---
 
-    def move(cls, direction, speed):
+    def move(self, direction, speed):
         pass
 
-    def equip(cls, item):
+    def equip(self, item):
         pass
 
-    def melee_attack(cls):
+    def melee_attack(self):
         pass
 
-    def ranged_attack(cls):
+    def ranged_attack(self):
         pass
 
-    def use_magic(cls):
+    def use_magic(self):
         pass
 
-    def pick_up(cls, item):
+    def pick_up(self, item):
         pass
 
-    def drop(cls, item):
+    def drop(self, item):
         pass
 
-    def _calculate_weight_(cls):
+    def _calculate_weight_(self):
         pass
