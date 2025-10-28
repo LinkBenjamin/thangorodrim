@@ -49,9 +49,40 @@ class Player:
     
     @classmethod
     def new_player(cls, name, character_class, race):
-        '''Auto-roll a new character'''
-        pass
+        """Create a new player from string inputs, with calculated defaults."""
+        player_data = {
+            'name': name,
+            'level': 1,
+            'experience': 0,
+            'character_class': character_class,
+            'race': race,
 
+            # Derived / default values
+            'max_hit_points': 100,
+            'current_hit_points': 100,
+            'max_magic_points': 50 if character_class.lower() == "mage" else 10,
+            'current_magic_points': 50 if character_class.lower() == "mage" else 10,
+            'max_carry': 50,
+
+            # Simple defaults or random generation
+            'strength': 10,
+            'intelligence': 10,
+            'dexterity': 10,
+            'constitution': 10,
+
+            # Empty equipment/inventory
+            'helmet': None,
+            'armor': None,
+            'boots': None,
+            'neck': None,
+            'finger': None,
+            'shield': None,
+            'weapon': None,
+            'quiver': None,
+            'inventory': [],
+        }
+
+        return cls(player_data)
     # --- GAMEPLAY METHODS ---
 
     def move(self, direction, speed):

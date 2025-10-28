@@ -10,11 +10,8 @@ ARAGORN_DATA_FILE = os.path.join(os.path.dirname(__file__), 'testdata', 'aragorn
 def test_player_init_from_file():
     '''A Player object may be initialized direct from a file, 
        such as in the case of a saved game being reloaded'''
-    
-    with open(ARAGORN_DATA_FILE, 'r', encoding='utf-8') as file:
-        file_input = json.load(file)
 
-    player = Player(file_input)
+    player = Player.from_file(ARAGORN_DATA_FILE)
 
     expected_name = "Aragorn"
 
@@ -26,7 +23,7 @@ def test_auto_roller():
        constructor with the character's name, race, and class,
        and it will roll or calculate all the other values.'''
     
-    player = Player(name="Bilbo", race="Hobbit", character_class="Rogue")
+    player = Player.new_player(name="Bilbo", race="Hobbit", character_class="Rogue")
 
     expected_name = "Bilbo"
     expected_experience = 0
