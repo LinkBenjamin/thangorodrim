@@ -1,9 +1,9 @@
 {
     "name": "Aragorn",
-    "race": "Dunadan",
+    "race": "DUNADAN",
     "level": 1,
     "experience": 0,
-    "character_class": "Ranger",
+    "character_class": "RANGER",
     "max_hit_points": 10,
     "current_hit_points": 10,
     "max_magic_points": 0,
