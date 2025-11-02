@@ -197,3 +197,23 @@ class Player:
         final = max(50, final)
         final = min(500, final)
         return int(floor(final))
+
+    def current_carry_weight(self):
+        '''We're going to sum up all the things that the Player
+           is wielding as well as all the items on the inventory.'''
+        total_weight = 0
+        
+        if self.helmet: total_weight += self.helmet.weight
+        if self.armor: total_weight += self.armor.weight
+        if self.boots: total_weight += self.boots.weight
+        if self.neck: total_weight += self.neck.weight
+        if self.finger: total_weight += self.finger.weight
+        if self.shield: total_weight += self.shield.weight
+        if self.weapon: total_weight += self.weapon.weight
+        if self.quiver: total_weight += self.quiver.weight
+        
+        if self.inventory:
+            for item in self.inventory:
+                total_weight += item.weight
+
+        return total_weight
