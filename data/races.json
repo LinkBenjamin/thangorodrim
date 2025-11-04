@@ -1,0 +1,45 @@
+[
+    {
+        "Name": "Human",
+        "HealthDie": "1d8",
+        "Bonuses": {
+        }
+    },
+    {
+        "Name": "Elf",
+        "HealthDie": "1d8",
+        "Bonuses":{
+            "intelligence": 2,
+            "dexterity": 2,
+            "constitution": 1
+        }
+    },
+    {
+        "Name": "Dwarf",
+        "HealthDie": "1d10",
+        "Bonuses": {
+            "strength": 2,
+            "intelligence": 1,
+            "dexterity": 2,
+            "constitution": 1
+        }
+    },
+    {
+        "Name":"Dunadan",
+        "HealthDie":"1d10",
+        "Bonuses":{
+            "strength":1,
+            "intelligence":1,
+            "dexterity":1,
+            "constitution":1
+        }
+    },
+    {
+        "Name":"Hobbit",
+        "HealthDie":"1d6",
+        "Bonuses":{
+            "strength":-2,
+            "dexterity":2
+        }
+    }
+]
