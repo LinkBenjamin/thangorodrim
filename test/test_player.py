@@ -17,8 +17,6 @@ from core.player import Player
 
 ARAGORN_DATA_FILE = os.path.join(os.path.dirname(__file__), 'testdata', 'aragorn.json')
 
-<<<<<<< Updated upstream
-=======
 def test_player_carry_weight():
     """Ensure current_carry_weight returns the summed weight of equipped items and inventory.
 
@@ -28,7 +26,6 @@ def test_player_carry_weight():
     player = Player.from_file(ARAGORN_DATA_FILE)
     assert player.current_carry_weight() == 0    
 
->>>>>>> Stashed changes
 def test_player_init_from_file():
     """Load a Player from JSON and verify basic fields.
 
