@@ -18,11 +18,18 @@ from core.player import Player
 ARAGORN_DATA_FILE = os.path.join(os.path.dirname(__file__), 'testdata', 'aragorn.json')
 
 def test_player_carry_weight():
-    """Ensure current_carry_weight returns the summed weight of equipped items and inventory.
+    '''Verify that the Player calculates the correct carry
+       weight'''
+    player = Player.from_file(ARAGORN_DATA_FILE)
+    assert player.current_carry_weight() == 0    
+
+def test_player_init_from_file():
+    '''A Player object may be initialized direct from a file, 
+       such as in the case of a saved game being reloaded
 
     Uses the Aragorn sample data file which should contain no items, so the expected
     carry weight is zero.
-    """
+    '''
     player = Player.from_file(ARAGORN_DATA_FILE)
     assert player.current_carry_weight() == 0    
 
