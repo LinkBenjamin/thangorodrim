@@ -1,0 +1,39 @@
+[
+    {
+        "Name": "Burglar",
+        "MagicDie": "1d6",
+        "Bonuses": {
+            "strength":-1,
+            "intelligence":2,
+            "dexterity":2,
+            "constitution":-1
+        }
+    },
+    {
+        "Name": "Ranger",
+        "MagicDie": "1d8",
+        "Bonuses": {
+            "intelligence":1,
+            "dexterity":3,
+            "constitution":2
+        }
+    },
+    {
+        "Name": "Warrior",
+        "MagicDie": "1d3",
+        "Bonuses": {
+            "strength":3,
+            "intelligence":-5,
+            "constitution":3
+        }
+    },
+    {
+        "Name": "Wizard",
+        "MagicDie": "1d10",
+        "Bonuses": {
+            "strength":-2,
+            "intelligence":5,
+            "constitution":-2
+        }
+    }
+]

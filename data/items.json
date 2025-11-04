@@ -1,0 +1,46 @@
+[
+    {
+        "id": "dagger_steel",
+        "name": "Steel Dagger",
+        "description": "A small steel dagger.",
+        "weight": 1.5,
+        "weapon": {
+            "damage_die": "1d4",
+            "range": 0,
+            "ammo_type": null
+        }
+    },
+    {
+        "id": "dagger_elvish",
+        "name": "Dagger of Gondolin",
+        "description": "A dagger forged in Gondolin by the Elvish smiths of King Turgon.",
+        "weight": 1.2,
+        "weapon": {
+            "damage_die": "1d6",
+            "range": 0,
+            "ammo_type":null
+        }
+    },
+    {
+        "id": "sword_steel",
+        "name": "Steel Sword",
+        "description": "A steel sword.",
+        "weight": 5.0,
+        "weapon": {
+            "damage_die":"2d6",
+            "range": 0,
+            "ammo_type":null
+        }
+    },
+    {
+        "id": "sword_elvish",
+        "name": "Longsword of Gondolin",
+        "description": "A sword forged in Gondolin by the Elvish smiths of King Turgon.",
+        "weight":3.5,
+        "weapon":{
+            "damage_die": "2d8",
+            "range":0,
+            "ammo_type":null
+        }
+    }
+]
