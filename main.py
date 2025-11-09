@@ -1,16 +1,37 @@
-import argparse
-from core.game import Game
-from interfaces.cli_interface import run_cli
-from interfaces.pygame_interface import run_pygame
+import pygame
+import sys
+from managers.scene_manager import SceneManager
+
+# Global constants
+WINDOW_WIDTH = 1024
+WINDOW_HEIGHT = 768
+FPS = 60
+GAME_TITLE = "Thangorodrim"
+
+def main():
+    pygame.init()
+    pygame.display.set_caption(GAME_TITLE)
+    
+    screen = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
+    clock = pygame.time.Clock()
+    scene_manager = SceneManager(screen)
+    
+    running = True
+    while running:
+        events = pygame.event.get()
+        for event in events:
+            if event.type == pygame.QUIT:
+                running = False
+            scene_manager.handle_events(events)
+        
+        running = running and scene_manager.update()
+        scene_manager.draw()
+        
+        pygame.display.flip()
+        clock.tick(FPS)
+
+    pygame.quit()
+    sys.exit()
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--mode", choices=["cli", "pygame"], default="cli")
-    args = parser.parse_args()
-
-    game = Game("data/scenarios/pelennor.json")
-
-    if args.mode == "cli":
-        run_cli(game)
-    else:
-        run_pygame(game)
+    main()
